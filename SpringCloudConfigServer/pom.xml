@@ -20,20 +20,25 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
         <!-- Eureka 整合 springboot -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
             <version>2.0.2.RELEASE</version>
         </dependency>
-        <!-- springcloud 整合 ConfigServer -->
+        <!-- springcloud 整合 ConfigClient -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
+            <artifactId>spring-cloud-config-client</artifactId>
             <version>2.0.2.RELEASE</version>
         </dependency>
         <!-- 消息总线的依赖 -->
-
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+            <version>2.0.2.RELEASE</version>
+        </dependency>
         <!-- actuator 监控中心的依赖 (刷新配置文件) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -42,12 +47,13 @@
 
     </dependencies>
 
+
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-bus-parent</artifactId>
-                <version>2.0.0.RC2</version>
+                <version>2.2.0.RC2</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
